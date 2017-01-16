@@ -13,10 +13,10 @@ public class Rectangle {
         this.b1 = b1;
     }
 
-//    public Rectangle(float a1f, int b1f) {
-//        this.a1f = a1f;
-//        this.b1f = b1f;
-//    }
+    public Rectangle(float a1f, float b1f) {
+        this.a1f = a1f;
+        this.b1f = b1f;
+    }
 
     public int areaRectangle(){
         int s = a1 * b1;
@@ -25,6 +25,26 @@ public class Rectangle {
 
     public void equalRectangle(int r1s, int r2s) {
         if (r1s == r2s) {
+            System.out.println("Площадь прямоугольника 1 равна прямоугольнику 2.");
+        } else {
+            System.out.println("Площадь прямоугольников не равна.");
+        }
+    }
+
+    public void equalRectangle(Rectangle r1, Rectangle r2) {
+        int rec1 = r1.areaRectangle();
+        int rec2 = r2.areaRectangle();
+        if (rec1 == rec2) {
+            System.out.println("Площадь прямоугольника 1 равна прямоугольнику 2.");
+        } else {
+            System.out.println("Площадь прямоугольников не равна.");
+        }
+    }
+
+    public void equalRectangle(Rectangle r2) {
+        int rec1 = areaRectangle();
+        int rec2 = r2.areaRectangle();
+        if (rec1 == rec2) {
             System.out.println("Площадь прямоугольника 1 равна прямоугольнику 2.");
         } else {
             System.out.println("Площадь прямоугольников не равна.");
