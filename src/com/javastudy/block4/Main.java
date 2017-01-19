@@ -56,5 +56,15 @@ public class Main {
         System.out.println("########################################################");
         System.out.println(to1.getA());
 
+        ///////////////////////////////////////////////////////////////////////////////
+        System.out.println();
+        System.out.println("////////////////////////////////////////////////////////");
+
+//        Я не знаю почему, но оно работает:) если кто поймет, напишите мне на how@gmail.com
+//        TestSingle single = null;
+//        single.say();
+
+        TestSingle single = TestSingle.s;
+        single.say();
     }
 }
