@@ -72,6 +72,7 @@ public class Triangle {
         return this.getA() == ((Triangle) obj1).getA() && this.getB() == ((Triangle) obj1).getB()
                 && this.getC() == ((Triangle) obj1).getC();
 
+
     }
 
     @Override
