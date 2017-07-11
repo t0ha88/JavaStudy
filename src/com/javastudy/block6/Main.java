@@ -10,7 +10,8 @@ public class Main {
         // #--------------------------------------------------#
 
         Triangle triangle3 = new Triangle(10,10,10);
-        Triangle triangle4 = new Triangle(10,90,10);
+        Triangle triangle4 = new Triangle(10,10,10);
+
 
 //        System.out.println(triangle3.equals(triangle4));
 
@@ -19,6 +20,7 @@ public class Main {
         System.out.println(triangle3.hashCode());
         System.out.println(triangle4.hashCode());
 
-        System.out.println(triangle3.equals(null));
+        System.out.println(triangle3.equals(triangle4));
+        System.out.println(triangle4.equals(null));
     }
 }
