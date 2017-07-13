@@ -63,75 +63,33 @@ public class Triangle {
         return "Triangle is figure, and we have " + nameTriangle + " triangle!";
     }
 
+
     @Override
     public boolean equals (Object obj) {
-        Triangle objInside = (Triangle) obj;
-        if (obj == null || this.getClass() != objInside.getClass()) {
-            return false;
-        }
-
+        // Check is this object
         if (this == obj) {
             return true;
         }
 
-        return (this.getSizeArea() == objInside.getSizeArea());
+        // Check is Object obj == null
+        if (obj == null) {
+            return false;
+        }
+
+        // Check is this different classes
+        if (this.getClass() != obj.getClass()) {
+            return false;
+        }
+
+        // Make from Object to Triangle
+        Triangle tri = (Triangle) obj;
+
+        // Check value
+        return (this.getA() == tri.getA() &&
+                this.getB() == tri.getB() &&
+                this.getC() == tri.getC());
 
 
-//        // reflexive
-//        System.out.println("reflexive");
-//        if (this.equals(objInside))
-//            return true;
-//
-//
-//        // symmetric
-//        System.out.println("symmetric");
-//        if ((this.getA() == objInside.getB())
-//                && (objInside.getB() == this.getA()));
-//        else
-//            return false;
-//
-//
-//
-//        // transitive
-//        System.out.println("transitive");
-//        if (this.getA() == objInside.getA()
-//                && this.getB() == objInside.getB()
-//                && this.getC() == objInside.getC());
-//        else
-//            return false;
-//
-//
-//
-////        // consistent
-////        System.out.println("consistent");
-////        return this.getSizeArea() == objInside.getSizeArea();
-//
-//
-//
-//        // consistent & not null
-//        System.out.println("consistent & not null");
-//        if ((this.equals(null)) || this.getClass() != objInside.getClass());
-//        return false;
-
-
-//        if (this != null && this.getClass() == objInside.getClass()) {
-//            return this.equals(objInside) && this.getSizeArea() == objInside.getSizeArea();
-//        }
-//            return false;
-
-
-//        /* | OLD REALIZATION| */
-//        Triangle tR2 = (Triangle) obj1; // I DO NOT KNOW HOW IS IT WORK!!!!!
-//        if (this == obj1 && obj1 == this) {
-//            return true;
-//        }
-//
-//        if (this == null || this.getClass() != tR2.getClass()) {
-//            return false;
-//        }
-//
-//        return this.getA() == ((Triangle) obj1).getA() && this.getB() == ((Triangle) obj1).getB()
-//                && this.getC() == ((Triangle) obj1).getC();
 
 
     }
@@ -140,7 +98,10 @@ public class Triangle {
     public int hashCode() {
         final int prime = 31;
         int result = 1;
-        int summ = a + b + c;
-        return result = prime * result + summ;
+        result = prime * result + a;
+        result = prime * result + b;
+        result = prime * result + c;
+        return result;
+
     }
 }
