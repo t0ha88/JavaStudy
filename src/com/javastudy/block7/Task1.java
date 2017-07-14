@@ -9,7 +9,7 @@ public class Task1 {
             summ += d[i];
         }
 
-        summ = summ / d.length;
+        summ /= d.length;
 
         return summ;
     }
